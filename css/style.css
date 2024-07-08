@@ -245,7 +245,6 @@ form [type="submit"] {
 
 /* reviews */
 #reviews {
-  display: none;
   background-color: #fff;
   margin: 30px auto;
   padding: 40px 20px;
