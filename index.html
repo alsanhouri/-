@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مطعم المذاق الفاخر</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header">
+    <nav class="container">
+      <a href="index.html">المذاق الفاخر</a>
+      <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#menu">قائمة الطعام</a></li>
+        <li><a href="#about">عنّا</a></li>
+        <li><a href="#reservation">احجز الان</a></li>
+        <li><a href="#reviews">آراء العملاء</a></li>
+      </ul>
+      <div class="humborger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="hero-section">
+    <div class="container">
+      <h1>مرحبًا بكم في مطعم المذاق الفاخر</h1>
+      <p>استمتع بأفضل الأطعمة في أجواء رائعة</p>
+      <a href="#reservation" class="btn">احجز الآن</a>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2>قائمة الطعام</h2>
+    <nav>
+      <button onclick="showSection('all')">كل الأطباق</button>
+      <button onclick="showSection('appetizers')">المقبلات</button>
+      <button onclick="showSection('main-courses')">الأطباق الرئيسية</button>
+      <button onclick="showSection('desserts')">الحلويات</button>
+    </nav>
+    <section id="appetizers" class="menu-section">
+      <h2>المقبلات</h2>
+      <ul>
+        <li>
+          <span class="dish-name">حمص</span>
+          <span class="dish-price">10.00 ريال</span>
+        </li>
+        <li>
+          <span class="dish-name">تبولة</span>
+          <span class="dish-price">15.00 ريال</span>
+        </li>
+      </ul>
+    </section>
+    <section id="main-courses" class="menu-section">
+      <h2>الأطباق الرئيسية</h2>
+      <ul>
+        <li>
+          <span class="dish-name">كبسة</span>
+          <span class="dish-price">30.00 ريال</span>
+        </li>
+        <li>
+          <span class="dish-name">منسف</span>
+          <span class="dish-price">35.00 ريال</span>
+        </li>
+        <li>
+          <span class="dish-name">المعكرونة الإيطالية</span>
+          <span class="dish-price">35.00 ريال</span>
+        </li>
+        <li>
+          <span class="dish-name">الكباب الشرقي</span>
+          <span class="dish-price">30.00 ريال</span>
+        </li>
+        <li>
+          <span class="dish-name">سلطة الفواكه الطازجة</span>
+          <span class="dish-price">30.00 ريال</span>
+        </li>
+      </ul>
+    </section>
+    <section id="desserts" class="menu-section">
+      <h2>الحلويات</h2>
+      <ul>
+        <li>
+          <span class="dish-name">بسبوسة</span>
+          <span class="dish-price">20.00 ريال</span>
+        </li>
+        <li>
+          <span class="dish-name">كنافة</span>
+          <span class="dish-price">25.00 ريال</span>
+        </li>
+      </ul>
+    </section>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>عنّا</h2>
+      <p>تذوق الفخامة في كل لقمة - مرحبًا بكم في مطعم المذاق الفاخر حيث النكهات الراقية والجو الأنيق يجتمعان لتجربة لا
+        تُنسى.</p>
+      <p>نحن نقدم تجربة طعام فريدة من نوعها مع أجواء رائعة وخدمة مميزة. تعال واستمتع بأفضل الأطعمة مع أصدقائك وعائلتك.
+      </p>
+    </div>
+  </section>
+
+  <section id="reservation">
+    <div class="container">
+      <h2>احجز الان</h2>
+      <form id="reservation-form">
+        <label for="name">الاسم</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" required>
+        <label for="date">التاريخ</label>
+        <input type="date" id="date" name="date" required>
+        <label for="time">الوقت</label>
+        <input type="time" id="time" name="time" required>
+        <label for="guests">عدد الضيوف</label>
+        <input type="number" id="guests" name="guests" min="1" required>
+        <input type="submit">احجز الآن</input>
+      </form>
+    </div>
+  </section>
+
+  <section id="reviews" class="menu-section">
+    <h2>آراء العملاء</h2>
+    <div class="customer-review">
+      <h3>رأي العميل الأول</h3>
+      <p>لقد استمتعت بتجربة رائعة في هذا المطعم. الطعام كان لذيذًا والخدمة كانت ممتازة.</p>
+    </div>
+    <div class="customer-review">
+      <h3>رأي العميل الثاني</h3>
+      <p>أنصح بزيارة هذا المطعم. الجو رائع والأطباق متنوعة ولذيذة جدًا.</p>
+    </div>
+    <div class="customer-review">
+      <h3>رأي العميل الثالث</h3>
+      <p>خدمة سريعة وموظفون ودودون. لن أتردد في العودة مرة أخرى.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="emoji">😊🌞🌷</div>
+      <p>مطعم المذاق الفاخر يتمنى لكم يومًا سعيدًا ومليئًا بالبهجة</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

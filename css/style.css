@@ -1,0 +1,287 @@
+:root {
+  --main-color: #fff;
+  --fr-color: #333;
+  --se-color: #f7f7f7;
+  --th-color: #ff6347;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  transition: 0.5s;
+  scroll-behavior: smooth;
+}
+
+/* global */
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* header */
+#header {
+  background-color: var(--fr-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+#header .container {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#header .container>a:first-child {
+  color: var(--main-color);
+  font-size: 1.9rem;
+}
+#header ul {
+  list-style: none;
+  display: flex;
+}
+#header ul a {
+  color: var(--main-color);
+  padding: 15px 20px;
+}
+#header ul a:hover {
+  background-color: var(--th-color);
+  border-radius: 10px;
+}
+#header .humborger {
+  display: none;
+  cursor: pointer;
+}
+#header .humborger>span {
+  background-color: var(--main-color);
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 786px) {
+  #header .container>a:first-child {
+    font-size: 20px;
+  }
+  #header ul {
+    flex-direction: column;
+    position: fixed;
+    top: 64px;
+    left: -100%;
+    background-color: var(--fr-color);
+    width: 100%;
+    text-align: center;
+  }
+  #header ul.active {
+    left: 0;
+  }
+  #header li {
+    padding: 20px;
+  }
+  #header .humborger {
+    display: block;
+  }
+  #header .humborger.active>span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #header .humborger.active>span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  #header .humborger.active>span:nth-child(2) {
+    opacity: 0;
+  }
+} 
+
+section {
+  padding: 3em 0;
+  text-align: center;
+}
+section  h2 {
+  padding: 1.5rem;
+  font-size: 2em;
+}
+/* home */
+#home {
+  background: url(../images/xPC1ySaZ-2_1-2.jpg) center center/cover;
+  color: var(--main-color);
+  text-align: center;
+  padding: 10em 0;
+  border-radius: 8px;
+  height: calc(100vh - 65px);
+}
+
+#home h1 {
+  font-size: 3em;
+}
+
+#home p {
+  font-size: 1.5em;
+  margin: 1em 0;
+}
+
+#home .btn {
+  background-color: var(--th-color);
+  color: var(--main-color);
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+/* menu */
+#menu {
+  background-color: var(--se-color);
+  min-height: calc(100vh - 65px);
+}
+#menu nav {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#menu button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+#menu button:hover {
+  background-color: #555;
+}
+
+#menu .menu-section {
+  display: none;
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#menu .menu-section h2 {
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+#menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#menu li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#menu li:last-child {
+  border-bottom: none;
+}
+
+#menu .dish-name {
+  font-weight: bold;
+}
+
+#menu .dish-price {
+  color: #888;
+}
+
+/* about */
+#about {
+  background-color: var(--main-color);
+}
+#about p {
+  margin-top: 10px;
+  color: var(--fr-color);
+}
+
+/* reservation */
+#reservation {
+  background-color: var(--se-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form label,
+form input,
+form textarea,
+form button {
+  margin: 0.5em 0;
+}
+
+form input {
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+form [type="submit"] {
+  background-color: var(--th-color);
+  color: var(--main-color);
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* reviews */
+#reviews {
+  display: none;
+  background-color: #fff;
+  margin: 30px auto;
+  padding: 40px 20px;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#reviews h2 {
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.customer-review {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.customer-review h3 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 0;
+}
+
+.customer-review p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
